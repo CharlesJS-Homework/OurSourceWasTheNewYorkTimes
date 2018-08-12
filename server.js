@@ -16,7 +16,13 @@ const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/nytreact';
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, 'app/public')));
+
+if (process.env.MONGODB_URI) {
+  app.use(express.static(path.join(__dirname, 'app/build')));
+} else {
+  app.use(express.static(path.join(__dirname, 'app/public')));
+}
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
