@@ -6,7 +6,7 @@
   "scripts": {
     "client": "cd app && npm start",
     "server": "nodemon bin/www",
-    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
   },
   "author": "",
   "license": "ISC",
