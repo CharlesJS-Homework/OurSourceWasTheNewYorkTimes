@@ -23,7 +23,7 @@ class Result extends Component {
   render() {
     return (
       <li>
-        <div>{ this.state.title }</div>
+        <a href={ this.state.url }>{ this.state.title }</a>
         <button onClick={ this.save }>Save</button>
       </li>
     );

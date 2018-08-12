@@ -35,7 +35,7 @@ class Saved extends Component {
         <ul>
           {
             this.state.articles.map(eachArticle => <li key={ eachArticle._id }>
-              <div>{ eachArticle.title }</div>
+              <a href={ eachArticle.url }>{ eachArticle.title }</a>
               <button articleid={ eachArticle._id } onClick={ this.removeHandler }>Remove</button>
             </li>)
           }
