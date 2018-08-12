@@ -1,0 +1,25 @@
+{
+  "name": "oursourcewasthenewyorktimes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "client": "cd app && npm start",
+    "server": "nodemon bin/www",
+    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "debug": "^3.1.0",
+    "express": "^4.16.3",
+    "mongoose": "^5.2.7",
+    "morgan": "^1.9.0",
+    "socket.io": "^2.1.1"
+  },
+  "devDependencies": {
+    "concurrently": "^3.6.1",
+    "eslint": "^5.3.0"
+  }
+}
