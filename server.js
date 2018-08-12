@@ -17,7 +17,7 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-if (process.env.MONGODB_URI) {
+if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, 'app/build')));
 } else {
   app.use(express.static(path.join(__dirname, 'app/public')));

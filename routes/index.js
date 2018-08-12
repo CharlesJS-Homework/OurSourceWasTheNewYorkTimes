@@ -5,7 +5,7 @@ const router = express.Router();
 
 /* GET home page. */
 router.get('*', (req, res) => {
-  if (process.env.MONGODB_URI) {
+  if (process.env.NODE_ENV === 'production') {
     res.sendFile(path.join(__dirname, '../app/build/index.html'));
   } else {
     res.sendFile(path.join(__dirname, '../app/public/index.html'));
